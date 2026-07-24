@@ -8,3 +8,8 @@ operation = input("What operation do you want to perform on the numbers? ")
 if operation == "+" :
     total_addition = first_number + second_number
     print(f"{first_number} + {second_number} = {total_addition}")
+
+if operation == "-" :
+    total_subtraction = first_number - second_number
+    print(f"{first_number} - {second_number} = {total_subtraction}")
+    
