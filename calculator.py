@@ -16,3 +16,7 @@ if operation == "-" :
 if operation == "*" :
     total_multiplication = first_number * second_number
     print(f"{first_number} * {second_number} = {total_multiplication}")
+
+if operation == "/" :
+    total_division = first_number / second_number
+    print(f"{first_number} / {second_number} = {total_division}")
