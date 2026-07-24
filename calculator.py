@@ -1,0 +1,10 @@
+print("Hello!")
+print("Welcome to the Calculator program.")
+
+first_number = int(input("Enter the first number: "))
+second_number = int(input("Enter the second number: "))
+operation = input("What operation do you want to perform on the numbers? ")
+
+if operation == "+" :
+    total_addition = first_number + second_number
+    print(f"{first_number} + {second_number} = {total_addition}")
