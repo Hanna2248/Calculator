@@ -3,8 +3,16 @@ print("Welcome to the Calculator program.")
 
 while True:
     first_number = int(input("Enter the first number: "))
+
+    while True:
+        operation = input("What operation do you want to perform on the numbers? ")
+        
+        if operation == "+" or operation == "-" or operation == "*" or operation == "/" :
+            break
+        else :
+            print("You can use the following operations: +, -, *, /")
+
     second_number = int(input("Enter the second number: "))
-    operation = input("What operation do you want to perform on the numbers? ")
 
     if operation == "+" :
         addition = first_number + second_number
@@ -24,7 +32,4 @@ while True:
             print(f"{first_number} / {second_number} = {division}")
         else:
             print("You cannot divide by zero.")
-    else :
-        print("Invalid operation.")
-
     
