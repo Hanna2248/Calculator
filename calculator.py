@@ -3,40 +3,47 @@ import math
 print("Hello!")
 print("Welcome to the Calculator program.")
 
-while True:
+print()
 
+operations = ["%", "+", "-", "*", "**", "sqrt", "/"]
+print("You can use the following operations: ")
+for operation in operations:
+    print(operation)
+    
+print()
+
+def get_number(message):
     while True:
         try:
-            first_number = int(input("Enter the first number: "))
-            break
+            number = float(input(message))
+            return number
         except ValueError:
             print("Please enter a number.")
+
+while True:
+
+    first_number = get_number("Enter the first number: ")
 
     while True:
         operation = input("What operation do you want to perform on the numbers? ")
 
-        if operation in ["%", "+", "-", "*", "**", "sqrt", "/"]:
+        if operation in operations:
             break
         else:
-            print("You can use the following operations: %, +, -, *, **, sqrt, /")
+            print("Invalid operation. Please try again.")
 
     if operation == "sqrt":
         if first_number >= 0:
-            square_root = math.sqrt(first_number)
+            square_root = round(math.sqrt(first_number), 2)
             print(f"√{first_number} = {square_root}")
         else:
             print("You cannot calculate the square root of a negative number.")
 
     else:
-        while True:
-            try:
-                second_number = int(input("Enter the second number: "))
-                break
-            except ValueError:
-                print("Please enter a number.")
+        second_number = get_number("Enter the second number: ")
 
         if operation == "%":
-            percentage = (first_number / 100) * second_number
+            percentage = round((first_number / 100) * second_number, 2)
             print(f"{first_number}% of {second_number} = {percentage}")
 
         elif operation == "+":
@@ -57,7 +64,7 @@ while True:
 
         elif operation == "/":
             if second_number != 0:
-                division = first_number / second_number
+                division = round(first_number / second_number, 2)
                 print(f"{first_number} / {second_number} = {division}")
             else:
                 print("You cannot divide by zero.")
