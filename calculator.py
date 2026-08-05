@@ -7,8 +7,7 @@ print()
 
 operations = ["%", "+", "-", "*", "**", "sqrt", "/"]
 print("You can use the following operations: ")
-for operation in operations:
-    print(operation)
+print(operations)
     
 print()
 
