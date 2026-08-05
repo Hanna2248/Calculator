@@ -11,13 +11,7 @@ print(operations)
     
 print()
 
-def get_number(message):
-    while True:
-        try:
-            number = float(input(message))
-            return number
-        except ValueError:
-            print("Please enter a number.")
+
 
 while True:
 
